@@ -15,11 +15,11 @@ public class CameraChange : MonoBehaviour
     private void Start()
     {
         Debug.Log($"1, 2 e 3 para trocar entre as câmeras, F apaga as luzes e G Muda o estado da fogueira.");
-        Debug.Log($"Tem um pequeno bug alguma coisa não estão carregando no início da cena, mas acho que só despausar o jogo ''conserta''.");
     }
 
     void Update()
     {
+        //Controle das Câmeras
         if (Input.GetKeyDown(KeyCode.Alpha1)){
             selectedCamera = 0;
         }
@@ -31,7 +31,18 @@ public class CameraChange : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)){
             selectedCamera = 2;
         }
-        
+
+        for (int i = 0; i < cameras.Length; i++)
+        {
+            if (i != selectedCamera)
+            {
+                cameras[i].depth = 0;
+            }
+        }
+        cameras[selectedCamera].depth = 1;
+
+
+        //Controle das Luzes
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (boolLights == true)
@@ -53,6 +64,8 @@ public class CameraChange : MonoBehaviour
                 }
             }
         }
+
+        //Controle das Partículas
         if (Input.GetKeyDown(KeyCode.G))
         {
             if (boolParticles == true)
@@ -66,14 +79,5 @@ public class CameraChange : MonoBehaviour
                 fire.Play();
             }
         }
-        for (int i = 0; i < cameras.Length; i++)
-        {
-            if (i != selectedCamera)
-            {
-                cameras[i].depth = 0;
-            }
-        }
-        cameras[selectedCamera].depth = 1;
-
     }
 }
