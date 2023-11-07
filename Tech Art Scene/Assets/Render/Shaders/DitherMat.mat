@@ -84,15 +84,15 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Threshold: 0.1
+    - _Threshold: 0.07
     - _Tiling: 192
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BL: {r: -0.8938667, g: 0.37037194, b: 0.25263983, a: 0}
-    - _BR: {r: 0.58723867, g: 0.37037194, b: 0.7197051, a: 0}
+    - _BL: {r: 0.731278, g: 0.10399898, b: -0.67410445, a: 0}
+    - _BR: {r: -0.8179465, g: 0.10399898, b: -0.565816, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TL: {r: -0.6574784, g: 0.5663431, b: -0.4969683, a: 0}
-    - _TR: {r: 0.8236268, g: 0.5663431, b: -0.029903112, a: 0}
+    - _TL: {r: 0.7742289, g: 0.63009053, b: -0.05962942, a: 0}
+    - _TR: {r: -0.7749957, g: 0.63009053, b: 0.048659008, a: 0}
   m_BuildTextureStacks: []
